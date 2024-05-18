@@ -1,38 +1,163 @@
+/* src/App.css */
+body {
+  background-color: #F5F5F5;; /* Light grey background */
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: #F5F5F5; /* Light Gray Background */
+  color: #212121; /* Dark Gray Text */
+  min-height: 40vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.logo {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
 }
+
+.quiz {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.score {
+  font-size: 1.5em;
+  margin-bottom: 35px;
+  color: #4CAF50; /* Green */
+}
+
+.timer {
+  width: 100%;
+  margin-bottom: 20px;
+  position: relative;
+  height: 10px;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.timer-bar {
+  height: 100%;
+  background-color: #4CAF50; /* Green */
+  border-radius: 5px;
+}
+
+.question-section, .result-section {
+  margin: 20px;
+}
+
+.question-text {
+  margin-bottom: 15px; /* Add margin below the question text */
+  font-size: 1.5em;
+}
+
+.answer-section button {
+  margin: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  border: 2px solid #4CAF50; /* Green Border */
+  border-radius: 5px;
+  background-color: white; /* White Background */
+  color: #4CAF50; /* Green Text */
+  transition: background-color 0.1s, color 0.1s;
+}
+
+.answer-section button:hover {
+  background-color: #4CAF50; /* Green Background */
+  color: white; /* White Text */
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+}
+
+.answer-section button.correct {
+  background-color: #4CAF50; /* Green */
+  color: white; /* White Text */
+ 
+}
+
+.answer-section button.incorrect {
+  background-color: #F44336;
+  border: none; /* Red */
+  color: white; /* White Text */
+}
+
+.result-section {
+  text-align: center;
+  background: #F5F5F5;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.result-section h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.result-section p {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.result-section button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+  border: 2px solid #4CAF50; /* Green Border */
+  border-radius: 5px;
+  background-color: white; /* White Background */
+  color: #4CAF50; /* Green Text */
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.result-section button:hover {
+  background-color: #4CAF50; /* Green Background */
+  color: white; /* White Text */
+}
+
+.start-button {
+  padding: 10px 20px;
+  cursor: pointer;
+  border: 2px solid #4CAF50; /* Green Border */
+  border-radius: 5px;
+  background-color: white; /* White Background */
+  color: #4CAF50; /* Green Text */
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.start-button:hover {
+  background-color: #4CAF50; /* Green Background */
+  color: white; /* White Text */
+}
+
+/* Add shake animation keyframes */
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+
+.shake {
+  animation: shake 0.5s;
+}
+
